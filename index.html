@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbgBEsyNQGDhHEM30HObHu4An5jSZG_H4&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbgBEsyNQGDhHEM30HObHu4An5jSZG_H4" async defer></script>
     <title>WeatherMap</title>
     <link rel="icon" type="image/x-icon" href="https://icon-library.com/images/weather-icon/weather-icon-14.jpg">
     <link rel="stylesheet" href="./style.css">
@@ -11,8 +11,8 @@
 <body>
     <nav class="navbar">
         <ul class="navbar-options">
-            <li>HOME</li>
-            <li>CREATORS</li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./creators.html">Creators</a></li>
         </ul>
     </nav>
     <h1>Haz clic en el mapa para mostrar el clima.</h1>
@@ -37,6 +37,8 @@
             mostrarInfoClima(ubicacionClic, map);
         });
     }
+
+    initMap();
     </script>
     <script src="./utils.js"></script>
 </body>
