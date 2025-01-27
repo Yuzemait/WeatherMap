@@ -3,33 +3,52 @@ body {
     padding: 0;
 }
 /* Estilo para el marcador personalizado */
-.contenido {
-    background-color: #4285F4;
+.info-window-content {
+    /* background-color: #4285F4; */
+    width: 150px;
     border-radius: 8px;
-    color: #FFFFFF;
+    transform: scale(0); /* Comienza pequeño */
+    transition: transform 0.3s ease-in-out; /* Transición suave */
+    color: black;
     font-size: 14px;
-    padding: 10px 15px;
+    padding: 5px 5px;
     position: relative;
     text-align: center;
 }
 
-.contenido::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    /* top: 100%; */
-    transform: translate(-50%, 0);
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-top: 8px solid #4285F4;
+.info-window-content.animate {
+    transform: scale(1); /* Crece al tamaño normal */
 }
+
+.weather-info {
+    list-style: none;
+    display: inline;
+}
+
+.weather-info li {
+    display: flex;
+    align-items: center;
+
+}
+
+.weather-info li span {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.weather-info li img {
+    width: 25px;
+    height: 24px;
+    padding: 3px;
+}
+
+
+
 
 /* Asegúrate de que el mapa tenga un tamaño adecuado */
 #map {
-    width: 70%;
-    height: 400px;
+    width: 75%;
+    height: 500px;
     margin: auto;
     border: 5px solid #4285F4;
     border-radius: 10px;
@@ -37,9 +56,11 @@ body {
 
 /* Estilo para la imagen del clima */
 .imagen-clima {
-    width: 35px; /* Ajusta el tamaño de la imagen según sea necesario */
-    height: 35px;
+    width: 40px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 40px;
     margin-bottom: 5px;
+    background-color: #4285F4;
+    border-radius: 5px;
 }
 .navbar {
     width: 100%;

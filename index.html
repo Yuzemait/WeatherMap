@@ -19,7 +19,25 @@
     <hr>
     <div id="map"></div>
 
-    <!-- Vincula el archivo utils.js aquí -->
+    <script>
+            // Función que se ejecuta cuando la API de Google Maps se ha cargado
+    function initMap() {
+        // Coordenadas iniciales del mapa
+        const ubicacionInicial = { lat: 20.66682 , lng: -103.39182 }; // Ciudad de México
+
+        // Crear el mapa
+        const map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 12,
+            center: ubicacionInicial,
+        });
+
+        // Agregar un listener para detectar clics en el mapa
+        map.addListener('click', (event) => {
+            const ubicacionClic = event.latLng;
+            mostrarInfoClima(ubicacionClic, map);
+        });
+    }
+    </script>
     <script src="./utils.js"></script>
 </body>
 </html>
