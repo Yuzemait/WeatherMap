@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbgBEsyNQGDhHEM30HObHu4An5jSZG_H4" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbgBEsyNQGDhHEM30HObHu4An5jSZG_H4&callback=initMap" async defer></script>
     <title>WeatherMap</title>
     <link rel="icon" type="image/x-icon" href="https://icon-library.com/images/weather-icon/weather-icon-14.jpg">
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
         <ul class="navbar-options">
+            <!-- <li><span class="material-symbols-outlined">menu</span></li> -->
             <li><a href="./index.html">Home</a></li>
             <li><a href="./creators.html">Creators</a></li>
         </ul>
@@ -18,6 +23,7 @@
     <h1>Haz clic en el mapa para mostrar el clima.</h1>
     <hr>
     <div id="map"></div>
+    <!-- <div class="footer">2025 ITESO - WeatherMap</div> -->
 
     <script>
             // Función que se ejecuta cuando la API de Google Maps se ha cargado
